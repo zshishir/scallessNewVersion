@@ -369,15 +369,14 @@
   <div class="modal-content">
     <div class="modal-header">
       <span class="close">&times;</span>
-      <h2>Modal Header</h2>
+      <h1>Search The Site</h1>
     </div>
-    <div class="modal-body">
-      <p>Some text in the Modal Body</p>
-      <p>Some other text...</p>
-    </div>
-    <div class="modal-footer">
-      <h3>Modal Footer</h3>
-    </div>
+
+    <p>Write below field</p>
+<form>
+<input type="text" class="searchSend" name="field1" placeholder="Search the site" required />
+<input type="submit" value="Send" class="searchSend" />
+</form>
   </div>
 
 </div>
@@ -525,9 +524,9 @@
     </div> 
      
     
-       <div class="clear line">
-                <h1>Product presentation</h1>
-                <p>simple, secure, and robust. </p>
+          <div class="helper-line">
+                <h1>WHAT PEOPLE SAY ABOUT US</h1>
+                <p>We create interactive</p>
             </div>
     
     
@@ -550,9 +549,9 @@
     
     </div> 
     
-         <div class="clear line">
-                <h1>Product presentation</h1>
-                <p>simple, secure, and robust. </p>
+          <div class="helper-line">
+                <h1>WHAT PEOPLE SAY ABOUT US</h1>
+                <p>We create interactive</p>
             </div>
     </div>  
   
@@ -1465,9 +1464,7 @@ $(window).bind('resize orientationchange', function() {
     <script>
     
         
-         $('#close, .modal').click(function(){
-        $('#id01').hide();   
-       
+      
         
         
     });
@@ -1642,12 +1639,22 @@ window.onclick = function(event) {
     }
 }*/
 var searchBox = document.getElementById("searchBox");
- var searchBtn =  document.getElementsByClassName("searchBtn")[0];
+var searchBtn =  document.getElementsByClassName("searchBtn")[0];
+var closeBtn = document.getElementsByClassName("close")[0];
       
       searchBtn.onclick = function(){
-          modal.style.display = "block";
+          searchBox.style.display = "block";
       }
       
+      closeBtn.onclick = function(){
+          searchBox.style.display = "none";
+          
+}
+      window.onclick = function(){
+          if(event.target == searchBox){
+              searchBox.style.display = "none";
+          }
+      }
       
       
 </script>  

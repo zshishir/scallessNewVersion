@@ -361,7 +361,7 @@
 
      </div>
     </header>
-   <div class="helper-line-Sm"></div>           
+         
         
 <div id="searchBox" class="modal">
 
@@ -380,11 +380,25 @@
   </div>
 
 </div>
-     <div class="slider">  
+        <!-- Banner Section  -->
+        <div id="banner-fullscreen">
+            <div class="home-section fullwidth-slider">
+                <section class="home-section" data-background="images/sliderImg01.jpg">
+                    <div class="banner-fullscreen-wrapper">
+                        <div class="banner-fullscreen-content">
+                            <h2 class="ami-div">Fantastic ideas</h2>
+                            <p>Create engaging mobile, tablet, and desktop experiences.</p>
+                            <div class="btn btns">See More</div>
+                            <div class="btn btns">Buy Now</div>
+                        </div>
+                    </div>
+                </section>
 
- <img src="images/sliderImg01.jpg" alt="flf">
-   </div>         
 
+            </div>
+        </div>
+
+        <!-- Banner Section  -->
 
     
 <div class="wrapper">
@@ -1462,17 +1476,7 @@ $(window).bind('resize orientationchange', function() {
     </script>
     
     <script>
-    
-        
-      
-        
-        
-    });
-        $('.searchBtn').click(function(){
-       
-        $('#id01').show();
-        
-    });
+
         
     $("document").ready(function(){
       $(".accordion h3:first").addClass("active");
@@ -1658,6 +1662,58 @@ var closeBtn = document.getElementsByClassName("close")[0];
       
       
 </script>  
+    <script>
+        
+        //Sticky nav Section // 
+var offset = $('#sticky-nav').offset();
+$(window).scroll(function(){
+   //$('#mine').text($(document).scrollTop());
+  $('#sticky-nav').addClass('fixed-nav');
+  if($(document).scrollTop() < 90){
+         $('#sticky-nav').removeClass('fixed-nav');
+  }
+});
+
+var offset = $('#sticky-nav-black').offset();
+$(window).scroll(function(){
+   //$('#mine').text($(document).scrollTop());
+  $('#sticky-nav-black').addClass('fixed-nav-black');
+  if($(document).scrollTop() < 90){
+         $('#sticky-nav-black').removeClass('fixed-nav-black');
+  }
+});
+        
+    var pageSection = $(".home-section");
+    pageSection.each(function(indx){
+        
+        if ($(this).attr("data-background")){
+            $(this).css("background-image", "url(" + $(this).data("background") + ")");
+        }
+    });
+    
+    // Function for block height 100%
+    function height_line(height_object, height_donor){
+        height_object.height(height_donor.height());
+        height_object.css({
+            "line-height": height_donor.height() + "px"
+        });
+    }
+    
+    // Function equal height
+    !function(a){
+        a.fn.equalHeights = function(){
+            var b = 0, c = a(this);
+            return c.each(function(){
+                var c = a(this).innerHeight();
+                c > b && (b = c)
+            }), c.css("height", b)
+        }, a("[data-equal]").each(function(){
+            var b = a(this), c = b.data("equal");
+            b.find(c).equalHeights()
+        })
+    }(jQuery);
+    
+    </script>
 </body>
 
 </html>

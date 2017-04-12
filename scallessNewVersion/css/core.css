@@ -55,6 +55,7 @@ height: 100%;
 }
 
 
+
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,hr {
     display: block;
 }
@@ -148,7 +149,7 @@ p {
 .social-nav {
     float: right;
     font-size: 0.750em;
-    color: #111111;
+    color: #FFF;
 }
 
 .social-nav li {
@@ -160,7 +161,7 @@ p {
     margin: 0px 5px;
 }
 .social-nav li a {
-    color: #111;
+    color: #FFFFFF;
 }
 .social-nav li a:hover {
     background: rgba(35, 33, 34, 0.5);
@@ -189,7 +190,7 @@ p {
         font-size: .857em;
         font-weight: 400;
         text-transform: uppercase;
-        color: rgba(17, 17, 17, 1);
+        color: rgba(255, 255, 255, 1);
         font-family: 'Oswald', sans-serif;
         letter-spacing: 1px;
     }
@@ -210,6 +211,7 @@ p {
         text-decoration: none;
         white-space: nowrap;
         border-bottom: 1px solid rgba(255, 255, 255, 0.0);
+           color: rgba(255, 255, 255, 1);
     }
     nav ul li a:hover {
         background: rgba(17, 17, 17, 1);
@@ -387,9 +389,32 @@ p {
 
 .card{ text-align: center;}
 .card h1{margin: 10px 0px;}
-.card i{ font-size:3em;}
+.card i{ }
+.card:hover{
+background: #000000;
+color: #FFFFFF;
+}
 
+.bg-col03{
+position: relative;  
 
+}
+.bg-col03::after {
+content: "";
+background-image: url(../images/carousel-bg.jpg);
+opacity: .8;
+top: 0;
+left: 0;
+bottom: 0;
+right: 0;
+position: absolute;
+z-index: -1; 
+background-size: cover;
+background-color: transparent !important;
+background-attachment: fixed;
+background-position: 50% 0 !important;
+background-repeat: no-repeat;
+}
 
 
 .wrapperFullWidth {
@@ -967,7 +992,15 @@ table,th,td{border:none}.w3-table-all{border:1px solid #ccc}
      clear: both;
     box-sizing: border-box;
 }
-
+.helper-emty{
+    line-height: 100%;
+    height: 150%;
+    display: block;
+    text-align: center;
+    padding: 50px 0px;
+     clear: both;
+    box-sizing: border-box;  
+}
 /** *Helper Line ****/
 
 
@@ -2345,9 +2378,151 @@ text-transform: uppercase;
     
     }
 
+.hexa:hover,
+.hexa:hover:before,
+.hexa:hover:after {
+background: #fff;  
+border-left:1px solid #FFF;
+border-right:1px solid #FFF;  
+/* Default hover font color */
+}
+.hexagon:hover i{
+color: #111111;
+}
+.hexagons:hover{
+color:#000000;
+}
+
+.hexagons {
+line-height: 90px;
+font-size:4em;
+color:#FFFFFF;
+
+ /* Original output, margin 0 of the button */ 
+/*margin: 52px 15px;*/ /* New output, margin 15px of the button,  37 + 15 = 52 */ 
+}
+.hexagons ,
+.hexagons:before ,
+.hexagons:after {
+height: 75px;
+width: 132px; 
+}
+/* ==============================
+   6.6 Round Shape Icon
+   ==============================  */
+.shape {
+	width: 200px;
+	height: 200px;
+	position: relative;
+     text-align: center;
+    margin: 0px auto;
+       margin-bottom: 20px;
+}
+		
+	.shape .overlay {
+		display:block;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top:-5px;
+		left:-5px;
+		pointer-events:none; 
+		background-repeat: no-repeat;
+		outline:0;	
+     
+      
+	}
+	.shape .overlay i {
+	color:#444444;
+        top:50px;
+        position: relative;
+ 
+	}
+
+	.shape:hover i  {
+	color:#FFFFFF !important;
+        top:50px;
+        position: relative;
+  
+	}
+/* different shapes */
+.shape .overlay.round {
+	background: url(round.png);		
+}
+
+.shape .overlay.hexagons {
+	background: url(../images/hexagon.png) no-repeat center top;
+}
+
+.shape .overlay.pentagon {
+	background: url(pentagon.png);
+}			
 
 
+.shape .bg, 
+.shape .details {
+	position: absolute;
+	width: 300px;
+	height:300px;
+	display:table-cell;
+	vertical-align:middle;
+	text-align:center;
+	top:0;
+	left:0;
+	opacity:0;
+	-webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;				
+	display:none;  
+}		
 
+.shape .bg {
+	background: #4b5a78;		
+}
+
+.shape .details span.heading {
+	font-family: 'Roboto Condensed', serif;		
+	font-size:30px;
+	display:block;
+	margin-top:70px;
+	color:#fff;
+	text-decoration:none;
+}
+
+.shape .details p {
+	font-family: 'Abel', sans-serif;		
+	color:#fff;
+	width: 70%;
+	font-size:14px;
+	margin:0 auto;
+}
+
+.shape a.button {
+	padding:5px 15px;
+	font-size:12px;	
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	-ms-border-radius: 20px;
+	-o-border-radius: 20px;
+	border-radius: 20px;
+	background: #2f3644;
+	text-decoration:none;
+	color:#fff;
+	display:block;
+	width:50px;
+	margin:0 auto;
+	text-align:center;
+	margin-top:15px;
+}
+
+.shape a.button:hover {
+background: #fff;
+color: #2f3644;				
+}
+/* ==============================
+6.6 Round Shape Icon
+   ==============================  */
 
 /* ==============================
   Messages Style Section

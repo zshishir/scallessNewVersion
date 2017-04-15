@@ -1317,24 +1317,6 @@ color: #111111;
 
 
 
-.col02 h1 i{
-color: #111111;
-padding:10px 8px;
-margin:5px;
-font-size: 1.5em;
-}
-.col02 img {
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    border-radius: 50%;
-    width: 150px;
-    margin-right: 10px;
-    border: 6px solid #FFF;
-    float: left;
-    box-shadow: 1px 1px 10px 2px #ccc;
-}
 
 /* ==============================
   8. Product Section
@@ -2579,6 +2561,301 @@ width: 132px;
 background: #fff;
 color: #2f3644;				
 }
+
+/* ==============================
+col02
+   ==============================  */
+.col02 p{
+margin:10px 0px;
+   
+
+}
+.col02 h1 i{
+color: #111111;
+padding:10px 8px;
+margin:5px;
+font-size: 1.5em;
+}
+
+.col02 h3{
+padding:5px 0px 15px 0px;
+text-align:right;
+}
+
+.col02 h3 i{
+padding:0px 10px 0px 10px;
+}
+.col02 h4{
+padding:5px 0px 0px 0px;
+text-align:right;
+font-size:1em;
+text-transform:capitalize;
+color:#111111;
+}
+
+.col02 img{	    
+-webkit-border-radius: 50%;
+-moz-border-radius: 50%;
+-ms-border-radius: 50%;
+-o-border-radius: 50%;
+border-radius: 50%;
+width:150px;
+    margin-right: 10px;
+
+border:6px solid #FFF;
+float:left;
+
+box-shadow: 1px 1px 10px  2px #ccc;
+}
+
+/* ==============================
+col02
+   ==============================  */
+
+
+/* ==============================
+col04
+   ==============================  */
+
+.col04{
+overflow: hidden;
+}
+.col04 h1{
+padding-bottom:20px;
+
+}
+.col04 ul {
+padding-top: 15px;
+}
+.col04 li {
+line-height: 28px;
+margin-top: 10px;
+font-weight: 300;
+}
+
+.col04 li i{
+border-radius: 50%;
+font-size: 0.625em;
+text-align: center;
+margin-right: 10px;
+padding:10px;
+background:#FFFFFF;
+color: #111111;
+border: 1px solid #ebebeb;
+}
+.col04 li:hover{
+-webkit-animation: arrowanimation 5s; /* Chrome, Safari, Opera */
+animation: arrowanimation 5s;
+color:#111111;
+}
+
+.col04 li:hover i{
+-webkit-animation: arrowanimation 5s; /* Chrome, Safari, Opera */
+animation: arrowanimation 5s;
+background: #232122;
+color: #FFFFFF;
+border: 1px solid #ebebeb;
+}
+.row-blog-style {
+width:100%;
+overflow: hidden;
+margin-bottom:10px;
+position: relative;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+-ms-box-sizing: border-box;
+box-sizing: border-box;
+}
+.row-blog-style h1{
+font-size: 1em;
+color: #232122;
+
+}
+.row-blog-style h2{
+text-transform:uppercase;
+font-size: 0.875em;
+color: #111111;
+
+}
+
+.row-blog-style h1 span{
+color:#444444;
+font-weight: 400;
+}
+
+.row-blog-style h2 span{
+color:#444444;
+font-weight: 400;
+}
+
+.row-blog-style p{
+padding:3px 0px 10px 0px;	
+}
+
+.row-blog-style img{
+display:block;
+border:5px solid #FFFFFF;
+outline:#ebebeb solid 1px;
+float:left;
+margin:5px 10px 40px 5px;
+width:40%;
+
+}
+.row-blog-style i{
+padding:5px 5px 5px 5px;
+
+}
+
+/* ==============================
+col04
+   ==============================  */
+
+
+/* ==============================
+col05
+   ==============================  */
+.col05 {
+
+}
+
+.col05 h1{
+margin-bottom:10px;
+}	
+.col05 h1 span{
+font-weight: 300;
+color: #444444;
+  
+}
+.col05 h2{
+font-weight:300;
+margin:20px 0px;
+font-size:1em;
+}
+.col05 p{
+margin-bottom:20px;
+}
+
+.col05 p span{
+margin-bottom:20px;
+padding:0px;
+    color: #222222;
+    font-weight: 500;
+    
+}
+
+.col05.box:nth-child(2n+1){
+margin:0px;
+}
+
+.col05 i{
+margin:10px 15px 15px 0px;
+font-size:1.2em;	
+display:inline-block;
+border-radius:50%;
+padding:15px;
+float: left;
+color:#111111;
+}
+
+/* ==============================
+col05
+   ==============================  */
+
+/* ==============================
+col07
+   ==============================  */
+
+.col07{
+text-align:center; 
+padding:0px 20px;
+}
+.col07:hover{
+background: #000000;
+color: #fff;
+cursor:pointer;
+}
+.col07 h1{
+margin:20px 0px;
+font-size: 1em;
+}
+.col07 p{
+padding: 0px 10px;
+
+}
+
+.col07 i{
+
+    font-size: 3em;
+    padding: 0px;
+    margin: 0px;
+
+
+}
+
+/* ==============================
+col07
+   ==============================  */
+
+
+/* ==============================
+col08
+   ==============================  */
+.bg-col08{
+position: relative;	text-align:center;}
+
+.bg-col08::after {
+content: "";
+background-image: url("../images/bg-col08-scrollar.jpg");
+opacity: 0.8;
+top: 0;
+left: 0;
+bottom: 0;
+right: 0;
+position: absolute;
+z-index: -1; 
+background-size: cover;
+background-color: transparent !important;
+background-attachment: fixed;
+background-position: 50% 0 !important;
+background-repeat: no-repeat;
+
+
+}
+.col08{
+padding: 50px 20px !important;
+color:#000000; 
+	text-align: center;
+}
+.col08:hover{
+background: #000000;
+color:#FFFFFF;
+cursor:pointer;
+
+}
+.col08 h1{
+margin:30px 0px 0px 0px;
+font-size: 1.125em;
+}
+.col08 img{
+-webkit-border-radius: 50%;
+-moz-border-radius: 50%;
+-ms-border-radius: 50%;
+-o-border-radius: 50%;
+border-radius: 50%;
+border: 6px solid #FFFFFF;
+box-sizing:border-box;
+box-shadow:1px 1px 10px 1px #E2DFE1;
+
+}
+.col08 i {
+padding:8px;
+}
+
+/* ==============================
+col08
+   ==============================  */
+
+
 /* ==============================
 6.6 Round Shape Icon
    ==============================  */

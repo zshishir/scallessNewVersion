@@ -430,6 +430,15 @@ background-repeat: no-repeat;
     margin: auto;
     clear: both;
 
+    display: block !important;
+    margin: 0px auto;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0px 15px;
+    clear: both;
+    position: relative;
 
 }
 
@@ -438,11 +447,19 @@ background-repeat: no-repeat;
  margin-right: -15px;
  margin-left: -15px;
  display: block;
-  
+    clear: both;
+
 
 }
 
 
+
+
+
+/*  GROUPING  */
+.container:before,
+.container:after { content:""; display:table; }
+.container:after { clear:both;}
 
 
 /*  GRID SYSTEM  */
@@ -892,14 +909,14 @@ input:not([type=submit]):not([type=file]) {
    ============================== */
 
 .accordion, .accordion .pointer, .accordion h2, .accordion p {
--webkit-transition: all 0.8s linear;
+/*-webkit-transition: all 0.8s linear;
 -moz-transition: all 0.8s linear;
 -ms-transition: all 0.8s linear;
-transition: all 0.8s linear;
+transition: all 0.8s linear;*/
 }
 
 .accordion {
-	width: 480px;
+	width: 100%;
 	border-bottom: solid 1px #c4c4c4;
 }
 .accordion h3 {
@@ -1135,7 +1152,7 @@ font-weight: 400;
 .product-classic img{
 display:block;
 float:left;
-width:50%;
+
 
 }
 .product-classic i{
@@ -2854,6 +2871,315 @@ padding:8px;
 /* ==============================
 col08
    ==============================  */
+
+/* ==============================
+col15
+   ==============================  */
+.col15-bgcolor{
+position: relative;
+}
+
+.col15-bgcolor::after {
+background-attachment: fixed;
+background-color: transparent !important;
+background-image: url("../images/col15-bg-scrollar.jpg");
+background-position: 50% 0 !important;
+background-repeat: no-repeat;
+background-size: cover;
+bottom: 0;
+content: "";
+left: 0;
+opacity: 0.2;
+position: absolute;
+right: 0;
+top: 0;
+z-index: -1;
+}
+
+.col15{
+border-bottom: 1px solid #ebebeb;
+float:left;
+overflow:hidden;
+width:50%;
+padding-bottom: 10px;   
+}
+
+.col15:nth-child(3n+3) {
+border-bottom:none;
+}
+.col15:nth-child(4n+4) {
+border-bottom:none;
+}
+
+.col15 img{
+-webkit-border-radius: 50%;
+-moz-border-radius: 50%;
+-ms-border-radius: 50%;
+-o-border-radius: 50%;
+border: 6px solid #fff;
+border-radius: 50%;
+box-shadow: 1px 1px 10px 2px #444444;
+height: 150px;
+width: 150px;
+float:left;
+margin:20px 20px 78px 20px;  
+}
+
+.col15 h1{
+margin-top:5px;
+
+}
+.col15 h2{
+margin:0px 0px 2px 0px;
+}
+.col15 h3{
+font-size:0.750em;
+margin-right:2px;
+}
+
+.col15:hover{
+background: #000000;
+color: #FFFFFF;
+}
+
+.col15 h3 span{
+font-style: italic;
+font-size:0.750em;
+text-transform:capitalize;
+}
+
+.col15 p{
+margin:10px 10px 5px 0px;
+font-size: .85em;
+}
+
+.col15 p i {
+margin: 0;
+padding: 0 10px;
+}
+
+.col15 p span{
+color:#444444;
+padding-bottom:10px;
+}
+.col19 {
+max-width:100%;
+position:relative; 
+height:550px; 
+overflow:hidden;
+z-index: 111;
+}
+
+.product-detail .soflow-color {
+      margin: 10px 0px;
+     height: 46px;
+    display: block;
+}
+.product-display del{
+     color:#ccc;
+}
+
+
+
+.form-control-disible{
+cursor: not-allowed;
+    opacity: 1;
+    
+}
+.help-block{
+    display: block;
+    font-size: .85em;
+}
+
+
+.product-detail{
+    width: 100%;
+    overflow: hidden;
+}
+.product-detail img{
+    box-sizing: border-box;
+    padding: 5px;
+    float: left;
+    
+}
+
+.product-detail .inputs {
+    height: 46px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 10px 0px;
+}
+.product-detail h1{
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+.product-detail h2{
+    display: inline-block;
+    font-size: .8em;
+    margin-bottom: 10px;
+}
+
+.product-detail > .star{
+    display: inline-block;
+    margin-bottom: 10px;
+    float: right;
+     font-size: .65em;
+    color: #4d4d4c;
+}
+.product-detail p{
+    margin-bottom: 10px;
+    font-size: 0.75em;
+}
+.product-detail .soflow-color {
+      margin: 10px 0px;
+     height: 46px;
+    display: block;
+}
+.product-detail del{
+     color:#ccc;
+}
+
+
+
+.product-detail ul {
+padding-top: 5px;
+}
+.product-detail li {
+line-height: 22px;
+margin-top: 10px;
+font-weight: 300;
+font-size: .85em;
+}
+
+.product-detail li i{
+font-size: 0.625em;
+text-align: center;
+margin: 5px;
+
+background:#FFFFFF;
+color: #111111;
+
+}
+
+.product-detail li:hover{
+-webkit-animation: arrowanimation 5s; /* Chrome, Safari, Opera */
+animation: arrowanimation 5s;
+color:#111111;
+}
+.cart_menu{
+    background: #ecedef;
+
+}
+.product-details{
+    margin: 30px 0px;
+
+}
+.product-details td{
+	border:1px solid #dddddd;
+	padding:7px;
+
+	
+}
+
+
+.product-details tr:nth-child(even){
+background:#fff;
+}
+
+.product-details tr:nth-child(odd){
+background:#efefef;
+}
+
+.cart_product img{
+    width: 30%;
+    height: 100px;
+}
+
+.quantity .minus, .quantity .plus {
+    display: block;
+    float: left;
+    cursor: pointer;
+    border: 0 transparent;
+    padding: 0;
+    width: 36px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #EEE;
+    font-size: 16px;
+    font-weight: 700;
+    transition: background-color .2s linear;
+    -webkit-transition: background-color .2s linear;
+    -o-transition: background-color .2s linear;
+}
+
+.quantity .qty {
+    float: left;
+    width: 50px;
+    border: 0;
+    border-left: 1px solid #DDD;
+    border-right: 1px solid #DDD;
+    background-color: #EEE;
+    text-align: center;
+    margin-bottom: 0;
+}
+.cart-product-price, .cart-product-quantity, .cart-product-subtotal {
+    text-align: center!important;
+}
+
+.form-tip{
+    font-size: .7em;
+    color: #ccc;
+    
+}
+/* ==============================
+col15
+   ==============================  */
+.mrb30 {
+    padding-right: 30px !important;
+}
+
+
+
+.col10 {
+cursor:pointer;
+	border: none !important;
+    color: #111111;
+}
+.col10 h1{
+margin:5px 0px 0px 0px;
+}
+.col10 i{
+font-size:2em;
+margin:6px 10px 0px 0px;
+float:left;
+}
+.col10 h2{
+margin-top:5px;
+}
+.col10 p{
+margin:0px 5px 5px 42px;
+
+}
+.col10 a {
+margin:0px 5px 0px 42px;
+font-weight:600;
+text-transform:uppercase;
+font-size: 0.750em;
+color: inherit;
+}
+.col10 a i{
+margin-left: 5px;
+font-size: 0.875em;
+float:none;
+}
+.col10:hover {
+background: #111111;
+color: #FFFFFF;
+}
+
+
+
 
 
 /* ==============================
